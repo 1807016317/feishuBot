@@ -1,0 +1,27 @@
+{
+    "uuid": "7f819a68948109dd6132e4343852481b",
+    "event": {
+        "app_id": "cli_a0cf66c4dbb9500d",
+        "chat_type": "private",
+        "employee_id": "685e72a7",
+        "is_mention": false,
+        "lark_version": "lark/2.7.0",
+        "message_id": "",
+        "msg_type": "text",
+        "open_chat_id": "oc_a3f89a6cada1d5150ed81c3a79a03e13",
+        "open_id": "ou_4c27c0cde9b9d4c7d8a3017ebcde9291",
+        "open_message_id": "om_d6bb9868ac4710721d7ddc9eb3b637a8",
+        "parent_id": "",
+        "root_id": "",
+        "tenant_key": "2e12e9c0f74f1652",
+        "text": "hai",
+        "text_without_at_bot": "hai",
+        "type": "message",
+        "union_id": "on_f02140cd0d366083aaf9ff780dcca854",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36",
+        "user_open_id": "ou_4c27c0cde9b9d4c7d8a3017ebcde9291"
+    },
+    "token": "i1SVjjEw1leB9jsxhHEIUbbC0GHvDQcK",
+    "ts": "1615706188.063257",
+    "type": "event_callback"
+}
