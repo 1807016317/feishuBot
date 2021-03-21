@@ -22,7 +22,7 @@ class log_mgr:
 
 
     @ staticmethod
-    def export_log_file(log_content):
+    def export_log_file(log_content, sub_dir):
         log_time = time.localtime()
         time_str = ''
         time_range = len(log_time) - 1
@@ -30,7 +30,7 @@ class log_mgr:
             time_str += (str(log_time[index]) + '-')
 
         log_file_name = time_str + 'log.log'
-        file_path = path.join(current_work_dir, log_file_name)  # 再加上它的相对路径，这样可以动态生成绝对路径
+        file_path = path.join(current_work_dir, sub_dir, log_file_name)  # 再加上它的相对路径，这样可以动态生成绝对路径
         print('file_path: ', file_path)
         with open(file_path, 'w+', encoding = 'utf-8') as log_f:
             jsonStr = json.dumps(

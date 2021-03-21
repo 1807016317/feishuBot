@@ -14,6 +14,7 @@ import re
 import emoj_mgr
 from net_call import NetCall
 from net_event_id import NetEvents
+import net_proxy
 
 const.TEXT_MSG = 'text' # 文本类型消息
 const.EMOJ_REG = 'e-'
@@ -29,7 +30,7 @@ class message_ctrl:
         """
         注册事件监听
         """
-        NetCall.addListen(NetEvents.EVENT_MESSAGE, self.handle_event)
+        NetCall.addListen(NetEvents['EVENT_MESSAGE'], self.handle_event)
         pass
         
     
@@ -51,14 +52,15 @@ class message_ctrl:
         response_content = msg_text_content
         
         is_emoj_req = re.match(const.EMOJ_REG, msg_text_content)
-        if is_emoj_req == None:
-            
-        elif is_emoj_req != None:
+        if is_emoj_req != None:
             search_content = re.sub(const.EMOJ_REG, '', msg_text_content)
             emojMgr = emoj_mgr.emoj_mgr(search_content)
             search_result = emojMgr.start()
             if search_result:
                 response_content = emojMgr.get_emoj_url()
+
+        server = net_proxy.getServer()
+        server.
         
 
         
